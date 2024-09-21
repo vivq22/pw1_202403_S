@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        ><title>Tablas en HTML</title>
+        <meta charset="utf-8"/>
+    </head>
+    <body>
+        <h1 id="#tablas">Tablas</h1>   
+        <a href="index.html"></a>
+        <table border="1">
+            <thead> <!--Contenedor de Encabezado-->
+                <tr>
+                    <th colspan="5">Numero de Ventas por Cuarto del Año</th>
+                </tr>
+                <tr><!--Definimos la linea (Table Row)-->
+                    <th>Zona</th>
+                    <th> <!--Table Heading-->
+                        Cuidad
+                    </th>
+                    <th>Q1</th>
+                    <th>Q2</th>
+                    <th>Q3</th>
+                </tr>
+            </thead>
+            <tbody> <!--Contenedor de Cuerpo-->
+                <tr>
+                    <td rowspan="2">Centro Sur</td> <!--Table Data-->
+                    <td>Tegucigalpa</td>
+                    <td>13</td>
+                    <td>15</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>Choluteca</td>
+                    <td>7</td>
+                    <td>23</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">Centro Nor</td>
+                    <td>San Pedro Sula</td>
+                    <td>18</td>
+                    <td>20</td>
+                    <td>22</td>
+                </tr>
+                <tr>
+                    <td>La Ceiba</td>
+                    <td>8</td>
+                    <td>10</td>
+                    <td>12</td>
+                </tr>
+            </tbody>
+            <tfoot> <!--Contenedor de Final-->
+                <tr></tr>
+                    <td colspan="2"></td>
+                    <td>46</td>
+                    <td>68</td>
+                    <td>59</td>
+                </tr>
+            </tfoot>           
+        </table>
+    </body>
+</html>
