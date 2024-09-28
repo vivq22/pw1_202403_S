@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formularios</title>
+    </head>
+    <body>
+        <h1>Formularios de HTML</h1>
+        <form action="forms.html" method="get">
+            <label for="txtNombre">Nombre</label>
+            <input id="txtNombre" name="txtNombre" type="text" placeholder="Nombre Completo"/> <!--placeholder es para el texto dentro del textbox-->
+            <br/>
+
+            <label for="txtEmail">Correo</label>
+            <input id="txtEmail" name="txtEmail" type="email" placeholder="tucorreo@lectronico.com"/>
+            <br/>
+
+            <!--Radio Buttons-->
+            <label>Cuidad:</label>
+            <br>
+            <label for="optTeg">Tegucigalpa</label>
+            <input type="radio"id="optTeg" name="optCuidad" value="TEG">&nbsp;
+
+            <label for="optSps">San Pedro</label>
+            <input type="radio"id="optSps" name="optCuidad" value="SPS">&nbsp;<!--nbsp significa none blocking space-->
+
+            <label for="optChl">Choluteca</label>
+            <input type="radio"id="optChol" name="optCuidad" value="CHL" checked>&nbsp; <!--el checked es para tener la seleccion preterdeminada-->
+            <br/>
+
+            <label for="cmbCuidad">Cuidades 2</label>
+            <select name="cmbCuidad" id="cmbCuidad">
+                <option value="TEG">Tegucigalpa</option>
+                <option value="SPS" selected >San Pedro Sula</option> <!--Selected es para tener la seleccion preterdeminada-->
+                <option value="CHL">Choluteca</option>
+            </select>
+            <br/>
+            <!--Textos Largos-->
+            <label for="txtLongText">Texto Largo</label>
+            <textarea name="txtLongText" id="txtLongText" placeholder="Texto muy muy largo como onepice"
+            ></textarea>
+            <!--Boton-->
+            <button type="submit" name="btnEnviar">Enviar</button>
+
+        </form>
+    </body>
+</html>
