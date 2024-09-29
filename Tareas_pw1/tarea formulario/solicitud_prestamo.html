@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Programa de Prestamos Estudiantiles</title>
+    </head>
+    <body>
+        <center>
+            <h1>Formulario para Solicitar Préstamos Estudiantiles</h1>
+            <h2>Por favor, rellene todos los espacios solicitados</h2>
+            <h3>hecho por: Vanessa Isabel Valladares Quiroz 0801-2005-00868</h3>
+            <img src="Selfie_movil.jpg" alt="Foto de mi persona">
+            <br/>
+            <audio src="jk-Seven.mp3" controls autoplay></audio>
+        </center>
+
+        
+        <form action="solicitud_prestamo.html"method="get">
+            <p>
+                <h3>Datos Personales</h3>
+                <label for="txtNombre">Nombre Completo:</label>
+                <input id="txtNombre" name="txtNombre" type="text" placeholder="Escriba su Nombre Completo"/>
+                <br><br/>
+
+                <label for="txtEmail">Email:</label>
+                <input id="txtEmail" name="txtEmail" type="email" placeholder="Dirección de correo electronico"/>
+                <br><br/>
+                <label for="txtNumero">Teléfono:</label>
+                <input id="txtNumero" name="txtNumero" type="text" placeholder="Número de Teléfono"/>
+                <br><br/>
+
+            </p>
+            <p>
+                <h3>Datos de Domicilio</h3>
+                <label for="txtDirección">Dirección Actual:</label>
+                <input type="text" name="txtDireccion" id="txtDireccion" placeholder="Dirección actual donde habita">
+                <br><br/>
+
+                <label for="txtCuidad">Cuidad:</label>
+                <input type="text" name="txtCuidad" id="txtCuidad" placeholder="Cuidad Residente">
+                <br><br/>
+                
+                <label for="cmbEstado">Estado:</label>
+                <select name="cmbEstado" id="cmbEstado">
+                    <option value="optAtl">Atlántida</option>
+                    <option value="optChl">Choluteca</option>
+                    <option value="optCol">Colón</option>
+                    <option value="optCom">Comayagua</option>
+                    <option value="optCor">Cortés</option>
+                    <option value="optPar">El Paraíso</option>
+                    <option value="optFra"selected>Francisco Morazán</option>
+                    <option value="optInt">Intibucá</option>
+                    <option value="optLpa">La Paz</option>
+                    <option value="optLem">Lempira</option>
+                    <option value="optOco">Ocotepeque</option>
+                    <option value="optOlan">Olancho</option>
+                    <option value="optSBar">Santa Bárbara</option>
+                    <option value="optVal">Valle</option>
+                    <option value="optYo">Yoro</option>
+                </select>
+                <br><br/>
+                <label for="txtCodigoP">Código Postal:</label>
+                <input type="text" name="txtCodigoP" id="txtCodigoP"placeholder="Código Postal">
+                <br><br/>
+            </p>
+
+            <p>
+                <h3>Datos Académicos</h3>
+                <label style="font-style: oblique;">Nivel de Educacion Actual:</label>
+                <BR></BR>
+                    <label for="optPrep">Preparatoria</label>
+                    <input type="radio"id="optPrep" name="optEdu" value="Prep">&nbsp;
+                    <br>
+                    <label for="optLi">Licenciatura</label>
+                    <input type="radio" name="optEdu" id="optLi" value="Licen">&nbsp;
+                    <br>
+                    <label for="optMaes">Maestría</label>
+                    <input type="radio" name="optEdu" id="optMaes" value="Maestria">&nbsp;
+                    <br>
+                    <label for="optDoc">Doctorado</label>
+                    <input type="radio" name="optEdu" id="optDoc" value="Docto">&nbsp;    
+                <br><br/>
+                <label  style="font-style: oblique;">Programa de Estudio:</label>
+                <br><br/>
+                    <label for="optCienCom">Ciencias de la Computación</label>
+                    <input type="radio" id="optCienCom" name="optProgram" value="CienCom">&nbsp;
+                    <br>
+                    <label for="optInge">Ingeniería</label>
+                    <input type="radio" id="optInge" name="optProgram" value="Inge">&nbsp;
+                    <br>
+                    <label for="optEco">Economía</label>
+                    <input type="radio" name="optProgram" id="optEco" value="Eco">&nbsp;
+                    <br>
+                    <label for="optAr">Artes</label>
+                    <input type="radio" name="optProgram" id="optAr" value="Art">&nbsp;
+                    <br>
+            </p>
+            <p>
+                <h3>Detalle de Prestamo</h3>
+                <label for="txtMonto">Monto del Prestamo Solicitado: </label>
+                <input type="text" name="txtMonto" id="txtMonto" placeholder="Escriba el monto del préstamo a solicitar">
+                <br><br>
+                <label for="txtRazon">Razón del prestamo:</label>
+                <textarea name="txtRazon" id="txtRazon" placeholder="Razón para solicitar el préstamo"></textarea>
+            </p>
+
+            <center>
+                <button type="submit" name="btnEnviar">Enviar Formulario</button>
+            </center>
+
+        </form>
+    </body>
+</html>
