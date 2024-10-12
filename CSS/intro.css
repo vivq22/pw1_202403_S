@@ -1,0 +1,50 @@
+a{
+    color: black;
+    background-color: violet;
+    line-height: 1.5;
+    /* forma de hacer comentarios*/
+}
+body{
+    background-color: black;
+    color: white;
+}
+main{
+    background-color: white;
+    color: black;
+    padding: 1rem;
+}
+main h2{
+    margin: 0.2px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1{
+    margin: 0.5rem 1rem;
+}
+aside nav ol li a{
+    display: flex;
+    padding: 0.5rem 0.75rem;
+    background-color: burlywood;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li a{
+    padding: 0.5rem 0.75rem;
+    text-decoration: none;
+    color: #ddd;
+    background-color: black;
+    transition: background-color 1s ease;
+}
+
+header nav ul li a:hover{
+    background-color: #eee;
+    color: #333;
+}
