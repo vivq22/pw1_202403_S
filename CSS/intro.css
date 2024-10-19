@@ -1,9 +1,87 @@
 a{
     color: black;
-    background-color: violet;
+    background-color: rgb(187, 146, 187);
     line-height: 1.5;
     /* forma de hacer comentarios*/
 }
+
+/*Nodo es un elemento de html*/
+/*Renderizar es Dibujar*/
+
+/*
+T=Top
+R=Right
+B=Bottom
+L=Left
+*/
+
+/*Elemento que se aplica en todo, el primero en todo*/
+*{
+    box-sizing: border-box; /*Considera todo*/
+}
+
+.hero-panel{
+    position: relative;
+    height: 80vh;
+    overflow: hidden;
+}
+
+/*El posicionamiento es relativo al anterior, posterior o absoluto a la pantalla o el plano cartesiano inmediato superior declarado que es el body. 
+
+El 0 es la izquierda en el plano cartesiano frances*/
+
+.hero-panel img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero-panel div{
+    display: flex;
+    flex-direction: column;
+    position:absolute;
+    top: 50%; /*Cambia la posicion del cuadrante*/
+    left: 50%;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1rem;
+    border-radius: 17px;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.hero-panel div a{
+    align-self: center;
+    display: inline-block;
+    padding: 1rem 2rem;
+    border: 1px solid rgb(44, 74, 50);
+    color: #21890c;
+    color: #ddd;
+    text-decoration: none;
+    margin: 0.5rem auto;
+    box-shadow: 3px 3px 5px black;
+    border-radius: 48px ;
+
+}
+
+.hero-panel div.cuadrante4{
+    top: 75%;
+    left: 75%;
+}
+
+.hero-panel div.cuadrante2{
+    top: 25%;
+    left: 75%;
+}
+
+.hero-panel div.cuadrante1{
+    top: 25%;
+    left: 25%;
+}
+
+.hero-panel div.cuadrante3{
+    top: 75%;
+    left: 25%;
+}
+
 body{
     background-color: black;
     color: white;
@@ -11,7 +89,6 @@ body{
 main{
     background-color: white;
     color: black;
-    padding: 1rem;
 }
 main h2{
     margin: 0.2px;
@@ -23,7 +100,8 @@ header{
 }
 
 header h1{
-    margin: 0.5rem 1rem;
+    margin: 0px;
+    font-size: 1.5rem;
 }
 aside nav ol li a{
     display: flex;
@@ -34,11 +112,14 @@ aside nav ol li a{
 header nav ul {
     list-style: none;
     display: flex;
+    margin: 0px;
+    margin-right: 1rem;
 }
 
 header nav ul li a{
-    padding: 0.5rem 0.75rem;
+    padding: 0.7rem 0.75rem;
     text-decoration: none;
+    display: block;
     color: #ddd;
     background-color: black;
     transition: background-color 1s ease;
