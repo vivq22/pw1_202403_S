@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
     box-sizing: border-box;
 }
@@ -6,6 +9,7 @@ body {
     color:#fff;
     margin:0px;
     padding:0px;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 }
 
 header {
@@ -207,5 +211,104 @@ main h2 {
 @media (min-width:1025px){
     body {
         background-color: #651900;
+    }
+}
+
+
+.full-progress {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress, .progress2, .progress3{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.progress{
+    width: 26px;
+    height: 89px;
+    border: 5px #eb27e5 double;
+    border-radius: 50%;
+    animation: rotar1 0.4s infinite;
+}
+
+.progress2{
+    width: 26px;
+    height: 89px;
+    border: double 5px #eb27e5;
+    border-radius: 50%;
+    animation: rotar2 0.4s infinite;
+}
+
+.progress3{
+    width: 26px;
+    height: 89px;
+    border: double 5px #eb27e5;
+    border-radius: 60%;
+    animation: rotar3 0.4s infinite;
+}
+
+
+.circulo{
+    border-radius: 100%;
+    background-color: #dadcdc;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+
+@keyframes rotar1{
+    0%{
+        transform: rotate(0deg) translateX(30%);
+    }
+    50%{
+        transform: rotate(110deg);
+    }
+    100%{
+        transform: rotate(145deg);
+    }
+}
+
+@keyframes rotar2{
+    0%{
+        transform: rotate(-90deg);
+    }
+    50%{
+        transform: rotate(0deg)
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes rotar3{
+    0%{
+        transform: rotate(0deg) translateX(-30%);
+    }
+    50%{
+        transform: rotate(-110deg);
+    }
+    100%{
+        transform: rotate(-145deg);
     }
 }
