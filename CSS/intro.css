@@ -1,131 +1,211 @@
-a{
-    color: black;
-    background-color: rgb(187, 146, 187);
-    line-height: 1.5;
-    /* forma de hacer comentarios*/
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: #000;
+    color:#fff;
+    margin:0px;
+    padding:0px;
 }
 
-/*Nodo es un elemento de html*/
-/*Renderizar es Dibujar*/
-
-/*
-T=Top
-R=Right
-B=Bottom
-L=Left
-*/
-
-/*Elemento que se aplica en todo, el primero en todo*/
-*{
-    box-sizing: border-box; /*Considera todo*/
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.hero-panel{
-    position: relative;
-    height: 80vh;
+header h1 {
+    margin: 0px;
+    margin-left:1rem;
+    padding:0.5rem 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+header nav ul {
+    display:flex;
+    flex-direction: column;
+    list-style: none;
+    margin:0px;
+    padding:0px;
+}
+
+header nav ul li a{
+    display: block;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    color: #ddd;
+    transition: background-color 1s ease;
+    border-bottom: 1px solid #bbb;
+}
+
+header nav ul li a:hover{
+    background-color: #eee;
+    color:#333
+}
+
+
+main {
+    background-color: #ddd;
+    color:#333;
+    padding:0;
+}
+
+main h2 {
+    margin:0.2px;
+}
+
+.hero-panel {
+    position:relative;
     overflow: hidden;
+    background-color:#21890c;
+    height: 80vh;
 }
-
-/*El posicionamiento es relativo al anterior, posterior o absoluto a la pantalla o el plano cartesiano inmediato superior declarado que es el body. 
-
-El 0 es la izquierda en el plano cartesiano frances*/
 
 .hero-panel img {
     width: 100%;
+    height: 80vh;
     object-fit: cover;
     object-position: center;
 }
 
-.hero-panel div{
+.hero-panel div {
     display: flex;
     flex-direction: column;
     position:absolute;
-    top: 50%; /*Cambia la posicion del cuadrante*/
-    left: 50%;
+    top:50%;
+    left:50%;
     background-color: rgba(255, 255, 255, 0.8);
     padding: 1rem;
     border-radius: 17px;
     transform: translateX(-50%) translateY(-50%);
 }
-
 .hero-panel div a{
     align-self: center;
-    display: inline-block;
-    padding: 1rem 2rem;
-    border: 1px solid rgb(44, 74, 50);
-    color: #21890c;
-    color: #ddd;
+    display:inline-block;
+    padding:1rem 2rem;
+    border: 1px solid #134e07;
+    background-color: #21890c;
+    color: #fff;
     text-decoration: none;
     margin: 0.5rem auto;
-    box-shadow: 3px 3px 5px black;
-    border-radius: 48px ;
-
+    box-shadow: 3px 3px 5px #000;
+    border-radius: 48px;
 }
-
 .hero-panel div.cuadrante4{
-    top: 75%;
-    left: 75%;
+    top:75%;
+    left:75%;
 }
-
 .hero-panel div.cuadrante2{
-    top: 25%;
-    left: 75%;
+    top:25%;
+    left:75%;
 }
 
-.hero-panel div.cuadrante1{
-    top: 25%;
-    left: 25%;
-}
-
-.hero-panel div.cuadrante3{
-    top: 75%;
-    left: 25%;
-}
-
-body{
-    background-color: black;
-    color: white;
-}
-main{
-    background-color: white;
-    color: black;
-}
-main h2{
-    margin: 0.2px;
-}
-header{
+.Precios {
+    padding:0.5rem;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 0.8rem;
     align-items: center;
 }
 
-header h1{
-    margin: 0px;
-    font-size: 1.5rem;
+.card {
+    position: relative;
+    border: 1px solid #000;
+    width: 300px;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 13px;
 }
-aside nav ol li a{
-    display: flex;
-    padding: 0.5rem 0.75rem;
-    background-color: burlywood;
+.card img {
+    width:100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center center;
 }
-
-header nav ul {
-    list-style: none;
-    display: flex;
-    margin: 0px;
-    margin-right: 1rem;
+.card h3, .card p {
+    margin:0px;
+    padding:0.5rem;
 }
-
-header nav ul li a{
-    padding: 0.7rem 0.75rem;
-    text-decoration: none;
+.card p {
+    font-size: 0.8rem;
+}
+.card a{
     display: block;
-    color: #ddd;
-    background-color: black;
-    transition: background-color 1s ease;
+    text-decoration: none;
+    padding: 0.75rem 0.5rem;
+    text-align: center;
+    background-color: #21890c;
+    color: #333;
+    font-weight: bold;
+}
+.card .precio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    top: 200px;
+    right:1rem;
+    background-color: darkorange;
+    transform: translateY(-50%);
+    font-weight: bold;
+    box-shadow: 1px 1px 10px #a05800;
 }
 
-header nav ul li a:hover{
-    background-color: #eee;
-    color: #333;
+.card.highlighted {
+    background-color: #21890c;
+}
+
+.card.highlighted a {
+    background-color: #a05800;
+}
+
+@media (min-width:720px){
+    body {
+        background-color: #134e07;
+    }
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header h1 {
+        padding:0px;
+        text-align: left;
+    }
+
+    header nav ul {
+        flex-direction: row;
+        margin-right: 1rem;
+    }
+
+    header nav ul li a{
+        border:none;
+    }
+
+    .Precios {
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    .Precios .card:nth-child(1),
+    .Precios .card:nth-child(3){
+        transform: scale(0.8) translateY(10%);
+    }
+
+    .Precios .card:hover{
+        transform: scale(1.1);
+    }
+
+}
+@media (min-width:1025px){
+    body {
+        background-color: #651900;
+    }
 }
