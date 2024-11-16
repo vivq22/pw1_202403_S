@@ -1,0 +1,582 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/**Vista Celular-General**/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ddd;
+    color:#333;
+    margin:0px;
+    padding:0px;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+/*Header*/
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header h1 {
+    margin: 0px;
+    margin-left:1rem;
+    padding:0.5rem 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+header nav ul {
+    display:flex;
+    flex-direction: column;
+    list-style: none;
+    margin:0px;
+    padding:0px;
+}
+
+header nav ul li a{
+    display: block;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    color: #000000;
+    transition: background-color 1s ease;
+    border-bottom: 1px solid #bbb;
+}
+
+header nav ul li a:hover{
+    background-color: #000000;
+    color:#ffffff
+}
+header img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+}
+
+/*Main*/
+main {
+    background-color: #ddd;
+    color:#333;
+    padding:0;
+}
+
+main h2 {
+    margin: 0.5em;
+}
+.hero-panel {
+    position:relative;
+    overflow: hidden;
+    background-color:#21890c;
+    height: 50vh;
+}
+
+.hero-panel img {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero-panel div {
+    display: flex;
+    flex-direction: column;
+    position:absolute;
+    top:50%;
+    left:50%;
+    color: white;
+    font-size: large;
+    padding: 1rem;
+    border-radius: 17px;
+    transform: translateX(-50%) translateY(-50%);
+}
+.hero-panel div a{
+    align-self: center;
+    display:inline-block;
+    padding:1rem 2rem;
+    border: 1px solid #000000;
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    margin: 0.5rem auto;
+    box-shadow: 3px 3px 5px #000;
+    border-radius: 48px;
+    font-weight: bold;
+}
+
+/**Productos**/
+.Product {
+    padding:0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: center;
+}
+/**Cards**/
+.card {
+    position: relative;
+    border: 1px solid #000;
+    width: 300px;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 13px;
+}
+.card img {
+    width:100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center center;
+}
+.card h3, .card p {
+    margin:0px;
+    padding:0.5rem;
+}
+.card p {
+    font-size: 0.8rem;
+}
+.card a{
+    display: block;
+    text-decoration: none;
+    padding: 0.75rem 0.5rem;
+    text-align: center;
+    background-color: #21890c;
+    color: #333;
+    font-weight: bold;
+}
+.card .price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    top: 200px;
+    right:1rem;
+    background-color: rgb(212, 132, 114);
+    transform: translateY(-50%);
+    font-weight: bold;
+    box-shadow: 1px 1px 10px #48413f;
+}
+
+/**Quotes**/
+.location {
+    display: flex;
+    flex-direction: column; 
+    background-color: #93e4fd; 
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .left, .right {
+    padding: 10px;
+  }
+  
+  .contact {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .contact label {
+    font-weight: bold;
+  }
+  
+  .contact input[type="text"],
+  .contact input[type="email"],
+  .contact select,
+  .contact textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .contact textarea {
+    resize: vertical;
+  }
+ 
+  .contact input[type="submit"] {
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #555;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .contact input[type="submit"]:hover {
+    background-color: #333;
+  }
+  
+  .right picture, .right img {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .location .left a{
+    align-self: center;
+    display: inline-block;
+    padding:1rem 2rem;
+    border: 1px solid #000000;
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    margin: 0.5rem auto;
+    box-shadow: 3px 3px 5px #000;
+    border-radius: 48px;
+    font-weight: bold;
+}
+  
+/*Footer*/
+footer {
+    background-color: #333; 
+    color: #fdd888; 
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer p {
+    font-size: 14px;
+    margin: 5px 0;
+  }
+  
+  .phones {
+    margin: 10px 0;
+  }
+  
+  .phones a {
+    color: #fdd888; 
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+  }
+  
+  .phones a:hover {
+    color: #fff; 
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav ul li {
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    color: #fdd888; 
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  nav ul li a:hover {
+    color: #fff; 
+  }
+  
+  .footer-bottom {
+    margin-top: 15px;
+    font-size: 12px;
+    color: #bbb;
+  }  
+
+/*Vista Tablet*/
+@media (min-width: 768px) {
+     header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+        margin: 0;
+    }
+
+    header nav ul {
+        flex-direction: row;
+        gap: 0.4rem;
+    }
+
+    header nav ul li a {
+        border-bottom: none;
+        font-weight: bold;
+        gap: 0.4rem;
+
+    }
+
+    .hero-panel {
+        height: 60vh;
+    }
+
+    .hero-panel div {
+        max-width: 400px;
+        padding: 2rem;
+    }
+
+    .Product {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        justify-content: center;
+    }
+
+    .card {
+        width: 45%;
+    }
+
+
+    .location {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .location {
+        display: block;
+    }
+
+    .location .left a{
+        margin-left: 2rem;    
+    }
+
+    .contact input[type="submit"]{
+        margin-left: 15rem;
+        align-self: center;
+        display:inline-block;
+        padding:0.5rem 2rem;
+        border: 1px solid #000000;
+        background-color: #ffffff;
+        color: #000000;
+        text-decoration: none;
+        margin: 0.5rem auto;
+        box-shadow: 3px 3px 5px #000;
+        border-radius: 48px;
+        font-weight: bold;
+
+    }
+  
+    .right picture, .right img {
+        width: 100%;
+        min-height: auto;
+        border-radius: 7px;
+      }
+    
+    .location .left {
+        display: inline-block;
+        width: 40%;
+        padding: 20px;
+        box-sizing: border-box;
+        vertical-align: top;
+      }
+
+    .location .right {
+        display: inline-block;
+        padding: 20px;
+        box-sizing: border-box;
+        vertical-align: top;
+        width: 55%;
+      }
+
+
+
+
+    /*Footer*/
+    footer {
+        background-color: #333;
+        width: 100%;
+        color: white;
+        display: flex;
+        justify-content: space-between; 
+        align-items: center;
+        padding: 1rem;
+    }
+    
+    footer p {
+        margin: 0px;
+    }
+    
+    footer .phones {
+        display: flex;
+        flex-direction: column;
+        margin: 0px;
+    }
+    
+    footer nav ul {
+        list-style: none;
+        display: flex;
+        gap: -20%; 
+        margin: 0px;
+        padding: 0;
+        flex-direction: column;
+    }
+    
+    footer a {
+        color: rgb(189, 109, 109);
+        text-decoration: none;
+    }
+    
+    footer a:hover {
+        text-decoration: underline;
+    }
+
+    footer nav ul li a{
+        color: white;
+    }
+}
+/*Vista Desktop*/
+@media (min-width: 1025px) {
+
+    header {
+        padding: 0.5rem 1rem;
+        margin-bottom: 0%;
+    }
+
+    header img {
+        width: 48px;
+        height: 48px;
+    }
+
+    header nav ul {
+        gap: 0.2rem;
+    }
+
+    header nav ul li a {
+        border-bottom: none;
+        font-weight: bold;
+    }
+
+    .hero-panel {
+        height: 70vh;
+    }
+
+    .hero-panel div {
+        max-width: 500px;
+        padding: 2.5rem;
+    }
+
+    .Product {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 4rem auto;
+    }
+
+    .Product .card {
+        width: auto;
+    }
+
+    .Product .card:nth-child(4) {
+        grid-column: 2;
+    }
+
+    .Product .card:nth-child(5) {
+        grid-column: 3;
+    }
+
+    .location {
+        max-width: 10000px;
+        margin: 0 auto;
+    }
+
+    .location {
+        display: block;
+    }
+
+    .location .left a{
+        margin-left: 15rem;    
+    }
+
+    .contact input[type="submit"]{
+        margin-left: 15rem;
+        align-self: center;
+        display:inline-block;
+        padding:0.5rem 2rem;
+        border: 1px solid #000000;
+        background-color: #ffffff;
+        color: #000000;
+        text-decoration: none;
+        margin: 0.5rem auto;
+        box-shadow: 3px 3px 5px #000;
+        border-radius: 48px;
+        font-weight: bold;
+
+    }
+  
+    .right picture, .right img {
+        width: 90%;
+        min-height: auto;
+        border-radius: 7px;
+      }
+    
+    .location .left {
+        display: inline-block;
+        width: 50%;
+        padding: 20px;
+        box-sizing: border-box;
+        vertical-align: top;
+      }
+
+    .location .right {
+        display: inline-block;
+        padding: 20px;
+        box-sizing: border-box;
+        vertical-align: top;
+      }
+
+    /*Footer*/
+    footer {
+        background-color: #333;
+        width: 100%;
+        color: white;
+        display: flex;
+        justify-content: space-between; 
+        align-items: center;
+        padding: 1rem;
+    }
+    
+    footer p {
+        margin: 0px;
+    }
+    
+    footer .phones {
+        display: flex;
+        flex-direction: column;
+        margin: 0px;
+    }
+    
+    footer nav ul {
+        list-style: none;
+        display: flex;
+        gap: -20%; 
+        margin: 0px;
+        padding: 0;
+        flex-direction: column;
+    }
+    
+    footer a {
+        color: rgb(189, 109, 109);
+        text-decoration: none;
+    }
+    
+    footer a:hover {
+        text-decoration: underline;
+    }
+
+    footer nav ul li a{
+        color: white;
+    }
+
+}
